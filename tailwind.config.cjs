@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bg-main-dektop': "url('/assets/bg-main-desktop.png')",
-        'bg-main-mobile': "url('/assets/bg-main-mobile.png')",
-        'bg-card-front': "url('/assets/bg-card-front.png')",
-        'bg-card-back': "url('/assets/bg-card-back.png')",
+        'main-desktop': "url('./assets/bg-main-desktop.png')",
+        'main-mobile': "url('./assets/bg-main-mobile.png')",
+        'card-front': "url('./assets/bg-card-front.png')",
+        'card-back': "url('./assets/bg-card-back.png')",
       },
       colors: {
         '_gradient-1': '#6448fe',
