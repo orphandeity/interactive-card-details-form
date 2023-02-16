@@ -8,6 +8,7 @@ import {
   FormikProps,
   FormikValues,
 } from 'formik'
+import { Logo } from './Icons'
 
 const validationSchema = yup.object({
   name: yup.string().required("Can't be blank"),
@@ -49,23 +50,26 @@ function App() {
   return (
     <main className='grid h-screen grid-cols-2 bg-main-desktop bg-no-repeat'>
       {/* example card */}
-      <div className='my-auto'>
+      <div className='my-auto uppercase tracking-widest text-white'>
         {/* front of card */}
-        <div className='h-[246px] max-w-md translate-x-[160px] rounded-lg bg-card-front bg-contain bg-center bg-no-repeat p-8 shadow-xl'>
+        <div className='flex h-[246px] max-w-md translate-x-[160px] flex-col justify-between rounded-lg bg-card-front bg-contain bg-center bg-no-repeat p-8 shadow-xl'>
+          <Logo />
           <div>
-            <span>0000</span>
-            <span>0000</span>
-            <span>0000</span>
-            <span>0000</span>
-          </div>
-          <div>
-            <div>Jane Appleseed</div>
-            <div>00/00</div>
+            <div className='flex max-w-[374px] justify-between text-2xl'>
+              <span>0000</span>
+              <span>0000</span>
+              <span>0000</span>
+              <span>0000</span>
+            </div>
+            <div className='flex justify-between pt-4 text-sm'>
+              <div className=''>Jane Appleseed</div>
+              <div>00/00</div>
+            </div>
           </div>
         </div>
         {/* back of card */}
-        <div className='mt-6 h-[246px] max-w-md translate-x-[248px] rounded-lg bg-card-back bg-cover bg-center bg-no-repeat p-8 shadow-xl'>
-          <div>000</div>
+        <div className='mt-6 flex h-[246px] max-w-md translate-x-[248px] items-center justify-end rounded-lg bg-card-back bg-cover bg-center bg-no-repeat p-8 shadow-xl'>
+          <div className='-translate-x-4'>000</div>
         </div>
       </div>
 
@@ -79,7 +83,10 @@ function App() {
           }}
         >
           {(props: FormikProps<any>) => (
-            <Form id='card-details' className='flex max-w-md flex-col gap-8'>
+            <Form
+              id='card-details'
+              className='z-50 flex max-w-lg flex-col gap-8 rounded-xl bg-white/30 p-12 backdrop-blur-sm'
+            >
               <div className='relative flex flex-col'>
                 <label
                   htmlFor='name'
@@ -103,7 +110,7 @@ function App() {
                         form.touched.name && form.errors.name
                           ? 'border-_error-red'
                           : 'border-_light-grayish-violet',
-                        'rounded-lg border px-3 py-2 text-lg placeholder:text-_light-grayish-violet'
+                        'cursor-default rounded-lg border px-3 py-2 text-lg outline-none placeholder:text-_light-grayish-violet'
                       )}
                     />
                   )}
@@ -138,7 +145,7 @@ function App() {
                         form.touched.card && form.errors.card
                           ? 'border-_error-red'
                           : 'border-_light-grayish-violet',
-                        'rounded-lg border px-3 py-2 text-lg placeholder:text-_light-grayish-violet'
+                        'cursor-default rounded-lg border px-3 py-2 text-lg placeholder:text-_light-grayish-violet'
                       )}
                     />
                   )}
@@ -178,7 +185,7 @@ function App() {
                               form.touched.month && form.errors.month
                                 ? 'border-_error-red'
                                 : 'border-_light-grayish-violet',
-                              'rounded-lg border px-3 py-2 text-lg placeholder:text-_light-grayish-violet'
+                              'cursor-default rounded-lg border px-3 py-2 text-lg placeholder:text-_light-grayish-violet'
                             )}
                           />
                         )}
@@ -208,7 +215,7 @@ function App() {
                               form.touched.year && form.errors.year
                                 ? 'border-_error-red'
                                 : 'border-_light-grayish-violet',
-                              'rounded-lg border px-3 py-2 text-lg placeholder:text-_light-grayish-violet'
+                              'cursor-default rounded-lg border px-3 py-2 text-lg placeholder:text-_light-grayish-violet'
                             )}
                           />
                         )}
@@ -245,7 +252,7 @@ function App() {
                           form.touched.cvc && form.errors.cvc
                             ? 'border-_error-red'
                             : 'border-_light-grayish-violet',
-                          'rounded-lg border px-3 py-2 text-lg placeholder:text-_light-grayish-violet'
+                          'cursor-default rounded-lg border px-3 py-2 text-lg placeholder:text-_light-grayish-violet'
                         )}
                       />
                     )}
