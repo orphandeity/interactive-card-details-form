@@ -20,7 +20,7 @@ function App() {
 // Background Cards
 const CardFront = () => {
   return (
-    <div className='relative z-50 flex h-[176px] max-w-[320px] translate-y-3/4 translate-x-4 flex-col justify-between rounded-lg bg-card-front bg-contain bg-center bg-no-repeat px-8 py-8 shadow-xl md:h-[246px] md:max-w-md md:translate-x-[160px] md:p-8'>
+    <div className='relative z-50 flex h-[176px] max-w-[320px] translate-y-3/4 translate-x-4 flex-col justify-between rounded-lg bg-card-front bg-contain bg-center bg-no-repeat px-8 py-8 shadow-xl md:h-[246px] md:max-w-md md:translate-y-0 md:translate-x-[160px] md:p-8'>
       <Logo />
       <div>
         <div className='flex max-w-[374px] justify-between pt-4 text-base md:text-2xl'>
@@ -40,7 +40,7 @@ const CardFront = () => {
 
 const CardBack = () => {
   return (
-    <div className='-z-10 mt-6 flex h-[176px] max-w-[320px] translate-x-10 -translate-y-full items-center justify-end rounded-lg bg-card-back bg-cover bg-center bg-no-repeat p-8 shadow-xl md:h-[246px] md:max-w-md md:translate-x-[248px]'>
+    <div className='-z-10 mt-6 flex h-[176px] max-w-[320px] translate-x-10 -translate-y-full items-center justify-end rounded-lg bg-card-back bg-cover bg-center bg-no-repeat p-8 shadow-xl md:h-[246px] md:max-w-md md:translate-y-0 md:translate-x-[248px]'>
       <div className='text-sm md:-translate-x-4 md:text-base'>000</div>
     </div>
   )
