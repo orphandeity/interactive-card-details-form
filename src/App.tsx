@@ -3,7 +3,7 @@ import { Logo } from './Icons'
 
 function App() {
   return (
-    <main className='h-screen bg-main-mobile bg-top bg-no-repeat md:grid md:grid-cols-2 md:bg-main-desktop md:bg-left'>
+    <main className='relative h-screen bg-main-mobile bg-top bg-no-repeat md:grid md:grid-cols-2 md:bg-main-desktop md:bg-left'>
       {/* Background Card */}
       <div className='my-auto uppercase tracking-widest text-white'>
         <CardFront />
@@ -12,6 +12,7 @@ function App() {
 
       {/* form */}
       <CardInput />
+      <Attribution />
     </main>
   )
 }
@@ -29,7 +30,7 @@ const CardFront = () => {
           <span>0000</span>
         </div>
         <div className='flex justify-between pt-1 text-[10px] md:pt-4 md:text-sm'>
-          <div className=''>Jane Appleseed</div>
+          <h1 className=''>Jane Appleseed</h1>
           <div>00/00</div>
         </div>
       </div>
@@ -47,13 +48,20 @@ const CardBack = () => {
 
 const Attribution = () => {
   return (
-    <div>
+    <div className='absolute bottom-2 w-full text-center text-[10px] text-_dark-grayish-violet'>
       Challenge by{' '}
-      <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>
+      <a
+        href='https://www.frontendmentor.io?ref=challenge'
+        target='_blank'
+        className='text-blue-500'
+      >
         Frontend Mentor
       </a>
       . Coded by{' '}
-      <a href='https://www.frontendmentor.io/profile/orphandeity'>
+      <a
+        href='https://www.frontendmentor.io/profile/orphandeity'
+        className='text-blue-500'
+      >
         Jeff R Williams
       </a>
       .
